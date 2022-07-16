@@ -15,6 +15,7 @@ Crypto Currency watcher
 * Spring Web
 * Spring Boot
 * Spring Data
+* H2
 * MySQL
 * Lombok
 
