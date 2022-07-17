@@ -1,13 +1,13 @@
 package com.example.cryptocurrencywatcher.repository;
 
-import com.example.cryptocurrencywatcher.entity.User;
+import com.example.cryptocurrencywatcher.entity.Cryptocurrency;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface CryptocurrencyRepository extends JpaRepository<Cryptocurrency, Long> {
 
-    Optional<User> findByUsername(String username);
+    Optional<Cryptocurrency> findBySymbol(String symbol);
 }

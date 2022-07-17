@@ -15,10 +15,16 @@ import javax.persistence.*;
 @Setter
 @EqualsAndHashCode
 @ToString
-@Table(name = "users")
-public class User {
+@Table(name = "tracked_cryptocurrencies")
+public class TrackedCryptocurrency {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String username;
+    @ManyToOne
+    @JoinColumn(name = "cryptocurrency_id")
+    private Cryptocurrency cryptocurrency;
+    private double startingSavedPrice;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
