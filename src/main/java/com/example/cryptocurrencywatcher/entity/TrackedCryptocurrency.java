@@ -21,8 +21,8 @@ public class TrackedCryptocurrency {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "cryptocurrency_id")
-    private Cryptocurrency cryptocurrency;
+    @JoinColumn(name = "currency_id")
+    private Currency currency;
     private double startingSavedPrice;
     @ManyToOne
     @JoinColumn(name = "user_id")
