@@ -5,9 +5,7 @@ import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
 
-@Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,7 +15,6 @@ import javax.persistence.Table;
 @ToString
 @EqualsAndHashCode(callSuper = true)
 @PrimaryKeyJoinColumn(name = "cryptocurrency_id")
-@Table(name = "cryptocurrencies")
 public class Cryptocurrency extends Currency{
 
 }
